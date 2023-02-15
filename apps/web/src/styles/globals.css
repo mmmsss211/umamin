@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './utils.css';
+
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url('/fonts/Inter-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Syne-Extrabold';
+  src: url('/fonts/Syne-ExtraBold.woff2') format('woff2');
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-secondary-300 font-inter text-white;
+  }
+}
+
+@layer components {
+  .contain {
+    @apply mx-auto w-[90%] max-w-screen-xl text-sm md:text-base 2xl:w-full;
+  }
+
+  .btn {
+    @apply rounded-md px-6 py-3 text-sm font-medium transition-colors md:text-base;
+  }
+
+  .primary-btn {
+    @apply bg-primary-200 hover:bg-primary-200/80 btn;
+  }
+
+  .secondary-btn {
+    @apply bg-secondary-100 hover:bg-secondary-100/80 btn border-2 border-[#505059];
+  }
+
+  .red-btn {
+    @apply btn bg-red-500 hover:bg-red-500/80;
+  }
+
+  .h1-text {
+    @apply text-[clamp(1.4rem,7vw,2.3rem)] font-extrabold  leading-[2rem] sm:text-4xl md:text-5xl 2xl:text-6xl;
+  }
+
+  .card {
+    @apply border-secondary-100 bg-secondary-200 rounded-lg border-2;
+  }
+
+  .input-field {
+    @apply bg-secondary-100 flex w-full items-center space-x-2 rounded-md px-5 py-3;
+  }
+
+  .input-field input {
+    @apply bg-secondary-100 w-full outline-none;
+  }
+
+  .input-field svg {
+    @apply text-xl text-[#9CA3AF];
+  }
+
+  .menu-item {
+    @apply hover:bg-secondary-100 flex cursor-pointer items-center space-x-2 rounded p-3 text-sm transition-colors;
+  }
+
+  .reply {
+    @apply border-l-secondary-400 text-secondary-400 border-l-4 pl-4;
+  }
+
+  .line {
+    @apply bg-secondary-100 h-[2px];
+  }
+
+  .msg-card {
+    @apply border-secondary-100 bg-secondary-200 rounded-2xl border-2 px-7 py-5;
+  }
+
+  .settings-label {
+    @apply text-secondary-400 mb-2 flex items-center space-x-1 text-sm font-medium;
+  }
+
+  .settings-input {
+    @apply bg-secondary-100 w-full rounded-md px-5 py-3 outline-none;
+  }
+
+  .chat-send {
+    @apply after:bg-secondary-200 self-end bg-[#CF49A3] before:bg-[#CF49A3];
+  }
+
+  .chat-receive {
+    @apply after:bg-secondary-200 bg-secondary-100 before:bg-secondary-100 self-start;
+  }
+
+  .chat-content {
+    @apply inline-block max-w-[255px] px-5 py-4 text-base text-white;
+  }
+
+  .clue-btn {
+    @apply bg-secondary-100 border-2 hover:bg-secondary-100/80 p-4 rounded-full font-medium w-full;
+  }
+}
