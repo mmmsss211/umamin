@@ -1,6 +1,0 @@
-query getMessages($username: String!) {
-  messages(username: $username) {
-    id
-    content
-  }
-}

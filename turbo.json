@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "generate": { "outputs": ["dist/**"] },
+    "start": { "outputs": [] },
+    "lint": { "outputs": [] },
+    "dev": { "cache": false },
+    "clean": { "cache": false },
+    "clean:cache": { "cache": false }
+  }
+}
