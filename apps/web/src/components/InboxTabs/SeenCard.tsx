@@ -32,8 +32,7 @@ interface Props {
 
 export const SeenCard = ({ message, refetch }: Props) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const { id, content, clue, receiverMsg, reply, createdAt } =
-    message;
+  const { id, content, clue, receiverMsg, reply, createdAt } = message;
   const { user } = useInboxContext();
   const triggerEvent = useLogEvent();
 
@@ -87,6 +86,7 @@ export const SeenCard = ({ message, refetch }: Props) => {
       />
 
       <ConfirmDialog
+        danger
         confirmText='Delete'
         isOpen={deleteModal}
         setIsOpen={setDeleteModal}
@@ -146,7 +146,7 @@ export const SeenCard = ({ message, refetch }: Props) => {
                   className='menu-item'
                 >
                   <HiAnnotation />
-                  <p>Card</p>
+                  <p>View</p>
                 </button>
 
                 <button

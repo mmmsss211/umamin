@@ -5,18 +5,12 @@ interface ImageFillProps
   extends Omit<ImageProps, 'src' | 'className' | 'layout'> {
   src?: string;
   className?: string;
-  contain?: boolean;
 }
 
-export const ImageFill = ({
-  src,
-  className,
-  contain,
-  ...rest
-}: ImageFillProps) => {
+export const ImageFill = ({ src, className, ...rest }: ImageFillProps) => {
   return (
     <div className={`relative overflow-hidden ${className}`}>
-      <Image src={src || '/icons/icon-128x128.png'} fill {...rest} />
+      <Image src={src || '/icons/icon-144.png'} fill {...rest} />
     </div>
   );
 };
